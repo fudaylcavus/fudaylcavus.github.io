@@ -1,0 +1,264 @@
+:root {
+  --primary-color: #1481BA;
+  --table-bg-color: #0CAADC;
+  --table-title-bg-color: #1481BA;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit
+}
+.App {
+  font-family: 'Raleway', sans-serif;
+}
+
+header {
+  margin-top: 7vh;
+  /* margin-bottom: 9vh; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  height: 85vh;
+  font-size: 1.8rem;;
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 60%;
+  margin-bottom: calc(30vh *(70 / 100));
+}
+nav {
+  top: 0;
+  background-color: var(--primary-color);
+  position:fixed; 
+  display: flex;
+  min-height: 7vh;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-size: 1.2rem;
+  z-index: 2;
+}
+nav span {
+  display: inline;
+  font-size: 1.1em;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+header img {
+  height: calc(30vh *(70 / 100));
+  width: auto;
+  aspect-ratio: 1;
+  position: absolute;
+  bottom: 0;
+}
+
+.wrap::after {
+  content: "|";
+  color: black;
+  margin-left: 0.2rem;
+  animation: blank 750ms infinite alternate;
+}
+
+@keyframes blank {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity:1 ;
+  }
+}
+
+main {
+  font-family: 'Raleway';
+  display: flex;
+  font-size: 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12vh;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding-top: 1rem;
+  margin-top: 3rem;
+  background-color: var(--table-title-bg-color);
+  color: white;
+  width: 60%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.skills-container .title {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.skills-container > .title {
+  letter-spacing: 7px;
+
+  
+}
+
+.skills {
+  display: flex;
+}
+
+.skill {
+  flex: 1 1;
+  padding: 0 2rem;
+  font-size: 1.3rem;
+  background-color: var(--table-bg-color);
+}
+
+.skill:not(:last-child) {
+  border-right: 2px solid white;
+}
+
+.skill .title::after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 10%;
+  width: 80%;
+  border-bottom: 2px solid white;
+}
+
+.skill ul {
+  list-style-type:square;
+}
+/* Education */
+.edu {
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+.edu table {
+  width: 70%;
+  border-collapse: collapse;
+  /* height: 100vh; */
+}
+
+.edu img, .edu i[class="fas fa-school"] {
+  width: 50%;
+  max-width: 150px;
+  font-size: 5rem;
+}
+.edu tbody tr:not(:first-child, :nth-child(2)) {
+  text-align: left;
+}
+
+.edu td {
+  box-sizing: content-box;
+  padding: 0;
+  margin: 0;
+  width: 50%;
+}
+
+.edu tbody td:first-child {
+  border-right: 2px solid var(--primary-color);
+}
+.edu .number {
+  font-family: sans-serif;
+}
+
+
+/* Footer design */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  height: 8vh;
+}
+.social-icons {
+  font-size: 2.2rem;
+  margin: 0 1rem;
+  color: white;
+  background-color: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+.social-icons i {
+  transition: transform 300ms;
+  position: relative;
+}
+
+
+i[class="fas fa-file"]::after {
+  font-family: sans-serif;
+  color: black;
+  font-size: 0.6rem;
+  content: "CV";
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 0.6rem);
+}
+
+.social-icons:hover i{
+  transform: scale(1.2);
+}
+
+footer .copied::after {
+  content: "Copied!";
+  font-size: 0.8rem;
+  width: fit-content;
+  padding: 10px 25px;
+  border-radius: 5px;
+  position: absolute;
+  font-family: 'Raleway';
+  top: -35px;
+  background-color: #43b581;
+  color: white;
+  display: block;
+
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 12px;
+  }
+
+  .header-text {
+    max-width: 80%;
+  }
+
+  .skills-container {
+    width: 80%;
+  }
+  
+  .skills {
+    flex-direction: column;
+  }
+
+  .skill:nth-child(2) {
+    border: none;
+    border-top: 2px solid var(--table-title-bg-color);
+  }
+}
+
+
+
