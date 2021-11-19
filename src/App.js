@@ -10,7 +10,7 @@ function App() {
   const [infoText, setInfoText] = useState(`
     I'm Fudayl Cavus, ${age} years-old <strong>Computer Engineering Student</strong>. 
     I started coding with web programming and now I'm Junior Full-Stack Engineer.
-    As a student, I wan't to explore this field as much as I can, especially to ML. 
+    As a student, I want to explore this field as much as I can and especially dive into ML. 
     If you have question, idea or project, all contact platforms on the bottom :) Waiting for your message!`)
 
   const handleScroll = ({ target }) => {
@@ -29,7 +29,7 @@ function App() {
   };
 
   const copyToClipboard = ({ target }) => {
-    navigator.clipboard.writeText("Fudayl Cavus#1011").then(function () {
+    navigator.clipboard.writeText("Fudayl Cavus#4586").then(function () {
       target.classList.add('copied');
       setTimeout(() => {
         target.classList.remove('copied')
